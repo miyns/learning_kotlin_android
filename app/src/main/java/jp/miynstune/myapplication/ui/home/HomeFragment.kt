@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.viewpager2.widget.ViewPager2
+import jp.miynstune.myapplication.InfinitePagerRecyclerAdapter
 import jp.miynstune.myapplication.PagerRecyclerAdapter
 import jp.miynstune.myapplication.R
 
@@ -35,10 +36,8 @@ class HomeFragment : Fragment() {
         })
 
         val viewpager2 : ViewPager2 = root.findViewById(R.id.viewpager2)
-        viewpager2.adapter = PagerRecyclerAdapter(items)
+        viewpager2.adapter = InfinitePagerRecyclerAdapter(items)
         viewpager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-//        viewpager2.orientation = ViewPager2.ORIENTATION_VERTICAL
-
 
         return root
     }
